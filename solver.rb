@@ -3,21 +3,21 @@ class Solver
     raise 'Number can not be negative' if number.negative?
 
     result = 1
-    (1..number).each do |i|
-      result *= i
+    (1..number).each do |num|
+      result *= num
     end
     result
   end
 
-  def reverse(word)
-    word.reverse
+  def reverse(words)
+    words.reverse
   end
 
-  def fizzbuzz(word)
-    return 'fizzbuzz' if (word % 3).zero? && (word % 5).zero?
-    return 'fizz' if (word % 3).zero?
-    return 'buzz' if (word % 5).zero?
+  def fizzbuzz(words)
+    return 'fizzbuzz' if (words % 3).zero? && (words % 5).zero?
+    return 'fizz' if (words % 3).zero?
+    return 'buzz' if (words % 5).zero?
 
-    word.to_s
+    words.to_s
   end
 end
